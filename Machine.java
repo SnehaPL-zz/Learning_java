@@ -1,12 +1,13 @@
 
-public class Machine {
-	String name = "Machine 1";
+public class Machine implements Info {
+	
+	private int id = 1;
 	
 	public void start(){
 		System.out.println("Machine Started");
 	}
 	
-	public void stop(){
-		System.out.println("Machine Stop");
+	public void showInfo(){
+		System.out.println("Machine id : "+ id);
 	}
 }

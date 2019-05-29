@@ -4,10 +4,15 @@ public class App {
 	public static void main(String[] args) {
 		Machine mach1 = new Machine();
 		mach1.start();
-		mach1.stop();
 		
-		Car car1 = new Car();
-		car1.showInfo();
+		Person person1 = new Person();
+		person1.greet();
+		
+		Info info1 = new Machine();
+		info1.showInfo();
+		
+		Info info2 = (Info) person1;
+		info2.showInfo();
 	}
 
 }
