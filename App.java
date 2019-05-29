@@ -2,17 +2,23 @@
 public class App {
 
 	public static void main(String[] args) {
-		Machine mach1 = new Machine();
-		mach1.start();
+		Plant plant1 = new Plant();
+		Tree tree = new Tree();
 		
-		Person person1 = new Person();
-		person1.greet();
+		Plant plant2 = tree;
 		
-		Info info1 = new Machine();
-		info1.showInfo();
+		plant1.grow();
+		plant2.grow();
 		
-		Info info2 = (Info) person1;
-		info2.showInfo();
+		tree.shedLeaves();
+		
+		//plant2.shedLeaves();
+		
+		doGrow(tree);
+	}
+	
+	public static void doGrow(Plant plant){
+		plant.grow();
 	}
 
 }
